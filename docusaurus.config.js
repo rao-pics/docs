@@ -11,12 +11,12 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://rao-pics.github.io",
+  url: "https://rao-pics.github.io/docs",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   projectName: "docs",
   organizationName: "rao-pics",
-  baseUrl: "/docs",
+  baseUrl: "/",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
