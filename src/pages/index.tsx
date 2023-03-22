@@ -21,7 +21,7 @@ function HomepageHeader() {
           justifyContent: "space-between",
         }}
       >
-        <div style={{ paddingTop: "4rem" }}>
+        <div className={clsx(styles.container_left)}>
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p
             className="hero__subtitle"
@@ -36,11 +36,8 @@ function HomepageHeader() {
             </Link>
           </div>
         </div>
-        <div style={{ flex: 1, position: "relative", bottom: "-8px" }}>
-          <img
-            src="/img/preview.gif"
-            style={{ width: "80%", boxShadow: "0 0 6px #000000" }}
-          />
+        <div className={clsx(styles.container_right)}>
+          <img src="/img/preview.gif" />
         </div>
       </div>
     </header>
@@ -52,7 +49,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout title={`${siteConfig.title}`} description={siteConfig.tagline}>
       <HomepageHeader />
-      <main>
+      <main className={clsx(styles.main_wrapper)}>
         <HomepageFeatures />
       </main>
     </Layout>
