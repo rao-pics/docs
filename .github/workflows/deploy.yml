@@ -8,7 +8,7 @@ on:
       - main
     paths:
       - '.github/workflows/deploy.yml'
-      - './**'
+      - 'docs/**'
   pull_request:
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     defaults:
       run:
-        working-directory: website
+        working-directory: docs
     steps:
       - uses: actions/checkout@v3
 
@@ -29,17 +29,17 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(cd client && yarn config get cacheFolder)" >> $GITHUB_ENV
 
-      - name: Cache dependencies
-        uses: actions/cache@v3
+      - uses: actions/cache@v3
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
-          path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
-          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-website-
+            ${{ runner.os }}-yarn-
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
@@ -49,4 +49,4 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
+          publish_dir: ./docs/build
