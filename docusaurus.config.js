@@ -16,7 +16,7 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   projectName: "docs",
   organizationName: "rao-pics",
-  baseUrl: "/",
+  baseUrl: "/docs",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
