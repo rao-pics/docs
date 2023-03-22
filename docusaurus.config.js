@@ -6,8 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Rao Pics",
-  tagline: "把《素材管理 App》打造为后台管理系统，实现局域网内实时共享。",
+  title: "Rao.Pics",
+  tagline:
+    "将《素材管理 App》升级为后台管理系统，<br/>实现局域网内即时预览、共享。",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -23,8 +24,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "zh",
-    locales: ["zh"],
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans"],
   },
 
   presets: [
@@ -52,7 +53,7 @@ const config = {
       // Replace with your project's social card
       image: "img/favicon.png",
       navbar: {
-        title: "Rao Pics",
+        title: "Rao.Pics",
         logo: {
           alt: "My Site Logo",
           src: "img/favicon.png",
@@ -65,13 +66,15 @@ const config = {
             label: "文档",
           },
           {
-            href: "https://github.com/rao-pics/core",
-            label: "GitHub",
+            href: "https://github.com/rao-pics",
             position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
           },
           {
             href: "https://rao.pics",
             label: "在线体验",
+            className: "button",
             position: "right",
           },
         ],

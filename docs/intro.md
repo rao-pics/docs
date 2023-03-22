@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Rao Pics 介绍
+# Rao.Pics 介绍
 
 📌 将《素材管理 App》升级为**后台管理系统**，实现局域网内即时**预览**、**共享**。
 
@@ -10,11 +10,7 @@ sidebar_position: 1
 
 🔴 所提供的功能不会修改 App 的任何文件，以避免导致异常情况。
 
-## 设计理念
-
-![](/img/preview.gif)
-
-:::tip 如此简单 - 各司其职
+:::tip 设计理念 - 各司其职
 
 - App 管理素材
 - Core
