@@ -11,9 +11,11 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://rao.pics",
+  url: "https://docs.rao.pics",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
+  projectName: "docs",
+  organizationName: "rao-pics",
   baseUrl: "/",
 
   onBrokenLinks: "throw",
@@ -69,6 +71,11 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            href: "https://rao.pics",
+            label: "在线体验",
+            position: "right",
+          },
         ],
       },
       footer: {
@@ -84,7 +91,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} rao.pics, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
