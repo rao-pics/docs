@@ -11,7 +11,7 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://rao-pics.github.io/",
+  url: "https://rao-pics.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   projectName: "docs",
@@ -25,8 +25,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "zh",
+    locales: ["zh"],
   },
 
   presets: [
@@ -86,7 +86,7 @@ const config = {
             items: [
               {
                 label: "介绍",
-                to: "/docs/intro",
+                to: "/intro",
               },
             ],
           },
