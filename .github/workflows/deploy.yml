@@ -8,7 +8,6 @@ on:
       - main
     paths:
       - '.github/workflows/deploy.yml'
-      - 'docs/**'
   pull_request:
 
 jobs:
@@ -20,7 +19,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     defaults:
       run:
-        working-directory: docs
+        working-directory: website
     steps:
       - uses: actions/checkout@v3
 
@@ -29,17 +28,17 @@ jobs:
         with:
           node-version: '14'
 
-      # - name: Get yarn cache
-      #   id: yarn-cache
-      #   run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
 
-      # - name: Cache dependencies
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
-      #     key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-website-
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
@@ -49,4 +48,4 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/build
+          publish_dir: ./website/build
