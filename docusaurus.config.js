@@ -14,9 +14,7 @@ const config = {
   url: "https://rao-pics.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  projectName: "docs",
-  organizationName: "rao-pics",
-  baseUrl: "/docs/",
+  baseUrl: "/",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -86,7 +84,7 @@ const config = {
             items: [
               {
                 label: "介绍",
-                to: "/intro",
+                to: "/docs/intro",
               },
             ],
           },
