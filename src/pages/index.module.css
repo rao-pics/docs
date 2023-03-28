@@ -57,3 +57,8 @@
   background-color: var(--ifm-footer-background-color);
   color: var(--ifm-font-color-secondary);
 }
+
+.dark {
+  background-color: #20232a;
+  color: #fff;
+}
