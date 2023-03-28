@@ -10,6 +10,37 @@
   overflow: hidden;
 }
 
+.container_right {
+  flex: 1;
+  position: relative;
+  bottom: -8px;
+}
+
+.container_right img {
+  width: 80%;
+  box-shadow: 0 0 6px #000000;
+}
+
+@media screen and (min-width: 1440px) {
+  .container_left {
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .container_left {
+    padding-bottom: 4rem;
+  }
+
+  .container_right img {
+    width: 100%;
+  }
+
+  .container_right {
+    bottom: -24px;
+  }
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
@@ -20,4 +51,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.main_wrapper {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-font-color-secondary);
+}
+
+.dark {
+  background-color: #20232a;
+  color: #fff;
 }
