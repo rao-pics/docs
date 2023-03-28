@@ -1,41 +1,23 @@
-# Website
+![rao-pics](https://github.com/rao-pics/core/blob/develop/readme/preview.gif?raw=true)
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+<p align='center'>
+    <a href="https://github.com/rao-pics/core/blob/master/LICENSE" target="_blank">
+        <img src="https://img.shields.io/github/license/meetqy/eagleuse"/>
+    </a>
+    <a href="https://www.typescriptlang.org" target="_black">
+        <img src="https://img.shields.io/badge/language-TypeScript-blue.svg" alt="language">
+    </a>
+    <a href="https://github.com/prettier/prettier" target="_black"> 
+        <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg"/> 
+    </a>
+</p>
 
-### Installation
+<p align='center'>
+    <a href="https://docs.rao.pics">在线文档</a> ·
+    <a href='https://rao.pics'>线上演示</a> ·
+    <a href='https://github.com/rao-pics/core/issues/61'>问题合集</a> 
+</p>
 
-```
-$ yarn
-```
+# <img src='https://raw.githubusercontent.com/rao-pics/rua/main/public/favicon.ico?raw=true' height="24px" width="24px" /> Rao.Pics
 
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+将《素材管理 App》升级为后台管理系统，实现局域网内即时预览、共享。
