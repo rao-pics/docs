@@ -9,7 +9,7 @@ import IndexMdx from "./_index.mdx";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectCards } from "swiper";
+import { EffectCards } from "swiper";
 import "swiper/css/effect-cards";
 
 import styles from "./index.module.css";
@@ -51,7 +51,7 @@ function HomepageHeader() {
   );
 }
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout title={`${siteConfig.title}`} description={siteConfig.tagline}>
