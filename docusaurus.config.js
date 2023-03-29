@@ -7,8 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Rao.Pics",
-  tagline:
-    "将《素材管理 App》升级为后台管理系统，<br/>实现局域网内即时预览、共享。",
+  tagline: "让「素材管理类App」<br/>可以局域网内即时预览、共享。",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here

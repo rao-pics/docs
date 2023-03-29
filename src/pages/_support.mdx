@@ -1,0 +1,81 @@
+## 已支持的类型文件
+
+<div style={{ display: "flex", marginTop: "2rem" }}>
+    <div style={{ marginRight: "2rem" }}>
+        <button
+        className="button button--primary button--lg"
+        style={{ width: 150 }}
+        >
+        图片类
+        </button>
+    </div>
+    <div style={{ display: "flex" }}>
+        {["jpg", "gif", "png", "jpeg", "webp", "bmp"].map((item) => (
+        <button
+            key={item}
+            className="button button--secondary button--lg"
+            style={{
+            marginRight: "1rem",
+            textTransform: "uppercase",
+            width: 150,
+            }}
+        >
+            {item}
+        </button>
+        ))}
+    </div>
+</div>
+
+<div style={{ display: "flex", marginTop: "2rem" }}>
+    <div style={{ paddingRight: "2rem" }}>
+        <button
+        className="button button--primary button--lg"
+        style={{ width: 150 }}
+        >
+        音视频类
+        </button>
+    </div>
+    <div style={{ display: "flex" }}>
+        {["mp4"].map((item) => (
+        <button
+            key={item}
+            className="button button--secondary button--lg"
+            style={{
+            marginRight: "1rem",
+            textTransform: "uppercase",
+            width: 150,
+            }}
+        >
+            {item}
+        </button>
+        ))}
+    </div>
+</div>
+
+<div style={{ display: "flex", marginTop: "2rem" }}>
+    <div style={{ paddingRight: "2rem" }}>
+        <button
+        className="button button--primary button--lg"
+        style={{ width: 150 }}
+        >
+        文档类
+        </button>
+    </div>
+    <div style={{ display: "flex" }}>
+        {["pdf"].map((item) => (
+        <button
+            key={item}
+            className="button button--secondary button--lg"
+            style={{
+            marginRight: "1rem",
+            textTransform: "uppercase",
+            width: 150,
+            }}
+        >
+            {item}
+        </button>
+        ))}
+    </div>
+</div>
+
+<div style={{marginBottom: "2rem"}}></div>

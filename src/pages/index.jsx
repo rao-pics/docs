@@ -6,6 +6,7 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import MDXContent from "@theme/MDXContent";
 import IndexMdx from "./_index.mdx";
+import SupportMdx from "./_support.mdx";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -91,6 +92,7 @@ export default function Home() {
         style={{ margin: "auto", padding: "2rem 0" }}
       >
         <MDXContent>
+          <SupportMdx />
           <IndexMdx />
         </MDXContent>
       </div>
