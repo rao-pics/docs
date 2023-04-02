@@ -61,7 +61,10 @@ export default function Home() {
         <HomepageFeatures />
       </main>
 
-      <div className="hero hero--dark" style={{ padding: "2rem 0" }}>
+      <div
+        className="hero hero--dark"
+        style={{ padding: "2rem 0", overflow: "hidden" }}
+      >
         <div className="container">
           <h1 className="hero__title">
             <Link to="https://github.com/rao-pics/rua">Rua</Link>{" "}

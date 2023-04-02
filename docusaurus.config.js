@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Rao.Pics",
-  tagline: "让「素材管理类App」<br/>可以局域网内即时预览、共享。",
+  tagline: `基于 <strong>Eagle/Pixcall/Billfish</strong> 等素材管理工具，<br/>用于局域网内<span style='color: green'>展示</span>已有的图库。`,
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
