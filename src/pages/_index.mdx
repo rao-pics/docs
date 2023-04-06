@@ -1,4 +1,12 @@
-## API 服务 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+## 使用
+
+<Tabs>
+<TabItem value="源码部署" label="源码部署" >
+
+### API 服务
 
 ```shell title="安装"
 pnpm i @raopics/use
@@ -16,7 +24,7 @@ EagleUse({
 `${host}/r` 可随机获取一张图片。
 :::
 
-## Theme 主题
+### Web 页面
 
 ```shell title="clone 主题"
 git clone https://github.com/rao-pics/rua.git
@@ -31,3 +39,37 @@ API_HOST=
 pnpm i
 pnpm start
 ```
+
+</TabItem>
+<TabItem value="Docker部署" label="Docker部署" default>
+
+```shell title='clone'
+git clone https://github.com/rao-pics/core.git
+```
+
+修改 **docker-compose.yml** 的 library 地址
+
+```yml {7}
+api:
+  image: meetqy/raopics-api
+  environment:
+    LIBRARY: /library # volumes中的地址
+    PORT: 9600
+  volumes:
+    - /Users/qymeet/MEGAsync/rao.library:/library # 本地挂载library地址
+```
+
+:::tip
+颜色加注的部分，就是需要修改的地方。
+
+一般情况只需要将`/Users/qymeet/MEGAsync/rao.library`替换为你的 library 地址即可
+:::
+
+### 启动
+
+```shell
+docker compose up -d
+```
+
+</TabItem>
+</Tabs>
