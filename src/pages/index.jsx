@@ -7,6 +7,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import MDXContent from "@theme/MDXContent";
 import IndexMdx from "./_index.mdx";
 import SupportMdx from "./_support.mdx";
+import IntroduceMdx from "./_introduce.mdx";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,6 +58,7 @@ export default function Home() {
   return (
     <Layout title={`${siteConfig.title}`} description={siteConfig.tagline}>
       <HomepageHeader />
+
       <main className={clsx(styles.main_wrapper)}>
         <HomepageFeatures />
       </main>
@@ -95,6 +97,7 @@ export default function Home() {
         style={{ margin: "auto", padding: "2rem 0" }}
       >
         <MDXContent>
+          <IntroduceMdx />
           <SupportMdx />
           <IndexMdx />
         </MDXContent>
