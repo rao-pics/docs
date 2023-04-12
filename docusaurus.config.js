@@ -66,16 +66,16 @@ const config = {
           //   label: "文档",
           // },
           {
-            href: "https://github.com/rao-pics",
-            position: "right",
-            className: "header-github-link",
-            "aria-label": "GitHub repository",
-          },
-          {
             href: "https://rao.pics",
             label: "在线体验",
             className: "button",
             position: "right",
+          },
+          {
+            href: "https://github.com/rao-pics",
+            position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
           },
         ],
       },

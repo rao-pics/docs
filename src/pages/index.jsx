@@ -85,6 +85,7 @@ export default function Home() {
                 <img
                   src={`./img/rua/preview${item}.jpg`}
                   style={{ borderRadius: 10 }}
+                  alt={"rua theme preview " + item}
                 />
               </SwiperSlide>
             ))}
@@ -92,13 +93,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        className="col col--8 "
-        style={{ margin: "auto", padding: "2rem 0" }}
-      >
+      <div className="col col--8 " style={{ margin: "auto", padding: "2rem" }}>
         <MDXContent>
           <IntroduceMdx />
-          <SupportMdx />
+          {/* <SupportMdx /> */}
           <IndexMdx />
         </MDXContent>
       </div>
