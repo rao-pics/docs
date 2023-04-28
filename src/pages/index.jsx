@@ -37,10 +37,7 @@ function HomepageHeader() {
             dangerouslySetInnerHTML={{ __html: siteConfig.tagline }}
           />
           <div className={styles.buttons}>
-            <Link
-              className="button button--secondary button--lg"
-              to="#api-服务"
-            >
+            <Link className="button button--secondary button--lg" to="#使用">
               快速开始 🚀
             </Link>
           </div>
